@@ -11,6 +11,7 @@ import { GetAllProductsResponse } from 'src/app/models/interfaces/products/respo
   styleUrls: []
 })
 export class CategoriesTableComponent {
+
   @Input() public categories: Array<GetCategoriesResponse> = [];
   @Output() public categoryEvent = new EventEmitter<EditCategoryAction>();
   @Output() public deleteCategoryEvent = new EventEmitter<DeleteCategoryAction>;
@@ -24,11 +25,12 @@ export class CategoriesTableComponent {
     }
   }
 
-  handeCategoryEvent(action: string, id?: string, categoryName?: string): void {
+  handleCategoryEvent(action: string, id?: string, categoryName?: string): void {
     if (action && action !== '') {
       this.categoryEvent.emit( { action,  id, categoryName});
     }
   }
+
 
 
 }

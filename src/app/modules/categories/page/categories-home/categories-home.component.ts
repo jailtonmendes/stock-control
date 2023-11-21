@@ -93,7 +93,7 @@ export class CategoriesHomeComponent implements OnInit, OnDestroy {
             });
           },
         });
-
+ 
       this.getAllCategories();
     }
   }
